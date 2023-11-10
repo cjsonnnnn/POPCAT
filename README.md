@@ -1,0 +1,3 @@
+# How to Run?
+
+Just open by double clicking the `run-popcat.bat` file, and then enter the number of clicks you want to do...
