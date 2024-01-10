@@ -57,6 +57,6 @@ if __name__ == "__main__":
     numIteration = 1000
     numIteration = numIteration if (i:=input(f"Enter number of output iteration for all the workers [{numIteration}]: ")) == '' else int(i)
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=numWorkers) as pool:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numWorkers) as pool:
         pIds = list(range(numWorkers))
         pool.map(main, *[pIds, numClicks, [numIteration]*numWorkers])
